@@ -1,0 +1,25 @@
+meta {
+  name: 회원 가입
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "lion1@lion.com",
+    "password": "11111111",
+    "name": "lion1",
+    "type": "user",
+    "profileImage": {
+      "originalname": "favicon.ico",
+      "name": "qrVEra3W9.ico",
+      "path": "/files/00-sample/qrVEra3W9.ico"
+    }
+  }
+}

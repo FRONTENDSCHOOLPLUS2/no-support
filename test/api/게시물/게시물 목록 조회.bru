@@ -1,0 +1,19 @@
+meta {
+  name: 게시물 목록 조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/posts?type={{info}}&page=1&limit=10&sort={"createdAt": 1}&keyword=돼지
+  body: none
+  auth: none
+}
+
+params:query {
+  type: {{info}}
+  page: 1
+  limit: 10
+  sort: {"createdAt": 1}
+  keyword: 돼지
+}

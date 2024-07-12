@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    // 3~15 줄 추가
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@recoil/*": ["recoil/*"],
+      "@zustand/*": ["zustand/*"],
+      "@api/*": ["api/*"],
+      // 없어도 인식되지만, 아래 코드를 작성해야 @를 붙여 자동 완성해줌.
+      "@utils/*": ["utils/*"],
+      "#types/*": ["types/*"]
+    },
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "allowJs": true // JS 파일도 컴파일. import 할 때 .js 확장자 생략 가능
+    // "checkJs": true, // 자바스크립트 파일에 대한 타입 체크 활성화
+  },
+  "include": ["src", "src/vite-env.d.ts"]
+}
